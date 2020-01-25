@@ -1,48 +1,189 @@
-<!--
-=========================================================
- Material Dashboard - v2.1.1
-=========================================================
-
- Product Page: https://www.creative-tim.com/product/material-dashboard
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
-
- Coded by Creative Tim
-
-=========================================================
-
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="{{url('public/adminpanel/img/apple-icon.png')}}">
-  <link rel="icon" type="image/png" href="{{url('public/adminpanel/img/favicon.png')}}">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    Users
-  </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
-  <link href="{{url('public/adminpanel/css/material-dashboard.css?v=2.1.1')}}" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{{url('public/adminpanel/demo/demo.css')}}" rel="stylesheet" />
+    <!-- Required meta tags-->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+    <title>Tutors Registration Form</title>
+
+    <!-- Icons font CSS-->
+    <link rel="apple-touch-icon" sizes="76x76" href="{{url('public/adminpanel/img/logo3.png')}}">
+    <link rel="icon" type="image/png" href="{{url('public/adminpanel/img/logo3.png')}}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="{{url('public/adminpanel/registration/vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('public/adminpanel/registration/vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
+   
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{{url('public/adminpanel/registration/vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('public/adminpanel/registration/vendor/datepicker/daterangepicker.css')}}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{url('public/adminpanel/css/material-dashboard.css?v=2.1.1')}}" rel="stylesheet" />
+  
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+   <link href="{{url('public/adminpanel/demo/demo.css')}}" rel="stylesheet" />
+   <link href="{{url('public/adminpanel/registration/css/main.css')}}" rel="stylesheet" media="all">
+
+    <style> 
+  .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+  .card-3 .card-heading {
+    background: url("public/adminpanel/registration/images/4.jpg") top left/cover no-repeat;
+    display: table-cell;
+    width: 100%;
+  }
+  
+  .card-3 .card-body {
+    padding-bottom: 15px;
+    padding-right:310px;
+    display: table-cell;
+
+    
+  }
+     @media (max-width: 900px) {
+    .card-3 {
+      display: block;
+    }
+    .card-3 .card-heading {
+      display: block;
+      width: 70%;
+      padding-top: 10px;
+       background-position: center center; 
+
+    }
+      input {
+    outline: none;
+    margin: 0;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 16px;
+    font-family: inherit;
+    
+  }
+  
+  .input-icon {
+    position: absolute;
+    font-size: 18px;
+    color: #ccc;
+    right: 8px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 33px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: right;
+  }
+  
+  .input--style-3 {
+    font-size: 16px;
+    color: #ccc;
+    background: transparent;
+    /* text-align: right; */
+   }
+  .title {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 36px; 
+  /* text-align: center;  */
+  }
+
+  .page-wrapper {
+  min-height: 50vh;
+  min-width:150vh;
+}
+  
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper--w960 {
+  max-width: 960px;
+}
+
+.wrapper--w780 {
+  max-width: 1000px;
+  max-height: 800px; */
+  /* padding-left:0px;
+  padding-right:150px */
+ }
+
+.wrapper--w680 {
+  max-width: 900px;
+}
+
+  }  
+ </style> 
+
 </head>
 
 <body class="">
-  <div class="wrapper ">
+
+  <!------------ Side Bar --------------------->
+<div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="{{url('public/adminpanel/img/sidebar-1.jpg')}}">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
         Tip 2: you can also add an image using data-image tag
     -->
-    <div class="logo">
+      <div class="logo">
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
           Star Gate
         </a>
@@ -55,217 +196,112 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="adminpanel.registration">
+          <div class="dropdown">
+          <li class="nav-item active ">
+            <a class="nav-link" href="">
               <i class="material-icons">wc</i>
               <p>Registration</p>
+              <div class="dropdown-content">
+               <a href="adminpanel.Tregistration">Tutor</a>
+               <a href="adminpanel.Sregistration">Student</a>
+             </div>
+          </div>
+          <!-- <li class="nav-item ">
+            <a class="nav-link" href="adminpanel.registration">
+              <i class="material-icons"></i>
+              <p>Registration</p>
             </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="adminpanel.user">
+          </li> -->
+          <li class="nav-item ">
+            <a class="nav-link" href="./user.blade.php">
               <i class="material-icons">person</i>
               <p>Users</p>
             </a>
           </li>
         
           <li class="nav-item ">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="./typography.blade.php">
               <i class="material-icons">grid_on</i>
               <p>Attendence</p>
             </a>
           </li>
-        </ul>
+          </ul>
       </div>
     </div>
-    <div class="main-panel">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-        <div class="container-fluid">
-          <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">User Profile</a>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-            <span class="navbar-toggler-icon icon-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end">
-            <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
-              </div>
-            </form>
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
-                    Stats
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
-                  <p class="d-lg-none d-md-block">
-                    Some Actions
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">person</i>
-                  <p class="d-lg-none d-md-block">
-                    Account
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- End Navbar -->
-      <div class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="card">
-                <div class="card-header card-header-primary">
-                  <h4 class="card-title">Edit Profile</h4>
-                  <p class="card-category">Complete your profile</p>
-                </div>
+
+<!------------------- end of side bar -------------------->
+
+<!------------ Registration Form ------------------------->
+
+
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins"> -->
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
                 <div class="card-body">
-                  <form>
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Company (disabled)</label>
-                          <input type="text" class="form-control" disabled>
+                    <h2 class="title">Tutor Registration Info</h2>
+                    <form method="POST">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text"  placeholder="Name" name="name">
                         </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="User Name" name="username">
                         </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control">
+                        <div class="input-group">
+                            <input class="input--style-3" type="email" placeholder="Email" name="email">
                         </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Fist Name</label>
-                          <input type="text" class="form-control">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Phone" name="phone">
                         </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Last Name</label>
-                          <input type="text" class="form-control">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Address" name="address">
                         </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Adress</label>
-                          <input type="text" class="form-control">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Salary" name="salary">
                         </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">City</label>
-                          <input type="text" class="form-control">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Password" name="password">
                         </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Country</label>
-                          <input type="text" class="form-control">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Tid" name="tid">
                         </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Postal Code</label>
-                          <input type="text" class="form-control">
+                        <div class="input-group">
+                            <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday">
+                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                         </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label>About Me</label>
-                          <div class="form-group">
-                            <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                            <textarea class="form-control" rows="5"></textarea>
-                          </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="gender">
+                                    <option disabled="disabled" selected="selected">Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
-                    <div class="clearfix"></div>
-                  </form>
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Save</button>
+                        </div>
+                    </form>
                 </div>
-              </div>
             </div>
-            <div class="col-md-4">
-              <div class="card card-profile">
-                <div class="card-avatar">
-                  <a href="#pablo">
-                    <img class="img" src="{{url('public/adminpanel/img/faces/marc.jpg" />
-                  </a>
-                </div>
-                <div class="card-body">
-                  <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-                  <h4 class="card-title">Alec Thompson</h4>
-                  <p class="card-description">
-                 
-                  </p>
-                  <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <footer class="footer">
+        </div> 
+     </div> 
+    <!--------------------------End of Registration Form -------------------------------------->
+<!---------------------------- footer -------------------------------------------------->
+    <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
-              <li>
+              <!-- <li>
                 <a href="https://www.creative-tim.com">
-                  Creative Tim
+                  Star Gate
                 </a>
               </li>
               <li>
                 <a href="https://creative-tim.com/presentation">
-                  About Us
+                  About
                 </a>
               </li>
               <li>
@@ -277,21 +313,24 @@
                 <a href="https://www.creative-tim.com/license">
                   Licenses
                 </a>
-              </li>
+              </li> -->
             </ul>
           </nav>
           <div class="copyright float-right">
             &copy;
             <script>
               document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            </script>, Star Gate Institute. <i class="material-icons"> </i> by
+            <a href="https://www.creative-tim.com" target="_blank">Dilki Sandunika</a>
           </div>
         </div>
       </footer>
     </div>
   </div>
-  <div class="fixed-plugin">
+  <!------------------------- end of footer ------------------------------------>
+  /* <!--------------------------- side bar filters ---------------------------------->
+
+    <!-- <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
       <a href="#" data-toggle="dropdown">
         <i class="fa fa-cog fa-2x"> </i>
@@ -314,33 +353,33 @@
         <li class="header-title">Images</li>
         <li class="active">
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{url('public/adminpanel/img/sidebar-1.jpg')}}" alt="">
+            <img src="../assets/img/sidebar-1.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{url('public/adminpanel/img/sidebar-2.jpg')}}" alt="">
+            <img src="../assets/img/sidebar-2.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{url('public/adminpanel/img/sidebar-3.jpg')}}" alt="">
+            <img src="../assets/img/sidebar-3.jpg" alt="">
           </a>
         </li>
         <li>
           <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="{{url('public/adminpanel/img/sidebar-4.jpg')}}" alt="">
+            <img src="../assets/img/sidebar-4.jpg" alt="">
           </a>
         </li>
         <li class="button-container">
           <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
         </li>
-        <!-- <li class="header-title">Want more components?</li>
+        <li class="header-title">Want more components?</li>
             <li class="button-container">
                 <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
                   Get the pro version
                 </a>
-            </li> -->
+            </li>
         <li class="button-container">
           <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
             View Documentation
@@ -358,14 +397,28 @@
         </li>
       </ul>
     </div>
-  </div>
-  <!--   Core JS Files   -->
-  <script src="{{url('public/adminpanel/js/core/jquery.min.js')}}"></script>
+  </div> -->
+<!------------------------------ end filters -----------------------------------> */
+
+    <!-- Jquery JS-->
+    <script src="{{url('public/adminpanel/registration/vendor/jquery/jquery.min.js')}}"></script>
+   
+    <!-- Vendor JS-->
+    <script src="{{url('public/adminpanel/registration/vendor/select2/select2.min.js')}}"></script>
+    <script src="{{url('public/adminpanel/registration/vendor/datepicker/moment.min.js')}}"></script>
+    <script src="{{url('public/adminpanel/registration/vendor/datepicker/daterangepicker.js')}}"></script>
+
+    <!-- Main JS-->
+    <script src="{{url('public/adminpanel/registration/js/global.js')}}"></script>
+    
+    <!--   Core JS Files   -->
+  <script src="{{url('public/adminanel/js/core/jquery.min.js')}}"></script>
   <script src="{{url('public/adminpanel/js/core/popper.min.js')}}"></script>
   <script src="{{url('public/adminpanel/js/core/bootstrap-material-design.min.js')}}"></script>
   <script src="{{url('public/adminpanel/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
+  
   <!-- Plugin for the momentJs  -->
-  <script src=".{{url('public/adminpanel/js/plugins/moment.min.js')}}"></script>
+  <script src="{{url('public/adminpanel/js/plugins/moment.min.js')}}"></script>
   <!--  Plugin for Sweet Alert -->
   <script src="{{url('public/adminpanel/js/plugins/sweetalert2.js')}}"></script>
   <!-- Forms Validations Plugin -->
@@ -373,7 +426,7 @@
   <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
   <script src="{{url('public/adminpanel/js/plugins/jquery.bootstrap-wizard.js')}}"></script>
   <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-  <script src="{{url('public/adminpanel/js/plugins/bootstrap-selectpicker.js')}}"></script>
+  <script src="{{url('public/adminPanel/js/plugins/bootstrap-selectpicker.js')}}"></script>
   <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
   <script src="{{url('public/adminpanel/js/plugins/bootstrap-datetimepicker.min.js')}}"></script>
   <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
@@ -383,7 +436,7 @@
   <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
   <script src="{{url('public/adminpanel/js/plugins/jasny-bootstrap.min.js')}}"></script>
   <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
-  <script src="v/js/plugins/fullcalendar.min.js')}}"></script>
+  <script src="{{url('public/adminpanel/js/plugins/fullcalendar.min.js')}}"></script>
   <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
   <script src="{{url('public/adminpanel/js/plugins/jquery-jvectormap.js')}}"></script>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
@@ -573,6 +626,13 @@
       });
     });
   </script>
-</body>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      md.initDashboardPageCharts();
 
+    });
+  </script>
+
+</body>
 </html>

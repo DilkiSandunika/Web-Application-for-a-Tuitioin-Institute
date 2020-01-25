@@ -23,10 +23,12 @@ Route::get('/login', function () {
 });
 
 
-Route::get('/adminpanel.registration', function () {
-    return view('adminpanel.registration');
+Route::get('/adminpanel.Tregistration', function () {
+    return view('adminpanel.Tregistration');
 });
-
+Route::get('/adminpanel.Sregistration', function () {
+    return view('adminpanel.Sregistration');
+});
 Route::get('/adminpanel.user', function () {
     return view('adminpanel.user');
 });

@@ -126,7 +126,7 @@ button {
 
 body {
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -216,11 +216,11 @@ h6 {
 }
 
 .wrapper--w780 {
-  max-width: 900px;
+  max-width: 780px;
 }
 
 .wrapper--w680 {
-  max-width: 900px;
+  max-width: 680px;
 }
 
 /* ==========================================================================
@@ -350,7 +350,6 @@ input {
   font-size: 16px;
   color: #ccc;
   background: transparent;
-  text-align: center;
 }
 
 .input--style-3::-webkit-input-placeholder {
@@ -466,7 +465,12 @@ input {
 /* ==========================================================================
    #TITLE
    ========================================================================== */
-
+.title {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 36px;
+}
 
 /* ==========================================================================
    #CARD
@@ -492,9 +496,9 @@ input {
 }
 
 .card-3 .card-heading {
-  background: url("public/adminpanel/registration/images/logo4.PNG") top left/cover no-repeat;
+  background: url("public/registration/images/logo3.png") top left/cover no-repeat;
   display: table-cell;
-  width: 80%;
+  width: 50%;
 }
 
 .card-3 .card-body {
@@ -519,6 +523,4 @@ input {
     padding: 37px 30px;
     padding-bottom: 45px;
   }
-
-  
 }

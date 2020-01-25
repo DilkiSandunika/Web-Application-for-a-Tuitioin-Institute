@@ -1,18 +1,3 @@
-<!--
-=========================================================
- Material Dashboard - v2.1.1
-=========================================================
-
- Product Page: https://www.creative-tim.com/product/material-dashboard
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
-
- Coded by Creative Tim
-
-=========================================================
-
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,8 +15,49 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="{{url('public/adminpanel/css/material-dashboard.css?v=2.1.1')}}" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{{url('public/adminpanel/demo/demo.css')}}" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project
+  <link href="{{url('public/adminpanel/demo/demo.css')}}" rel="stylesheet" /> -->
+  <style>
+  .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
 </head>
 
 <body class="">
@@ -43,34 +69,56 @@
         Tip 2: you can also add an image using data-image tag -->
 
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+        <a href="adminpanel.dashboard" class="simple-text logo-normal">
           Star Gate
         </a>
       </div>
-      <div class="sidebar-wrapper">
+      <div class="sidebar-wrapper" >
         <ul class="nav">
           <li class="nav-item active  ">
             <a class="nav-link" href="adminpanel.dashboard">
-              <i class="material-icons"></i>
+              <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
+          <div class="dropdown" >
           <li class="nav-item ">
+            <a class="nav-link" href="">
+              <i class="material-icons">wc</i>
+              <p>Registration</p>
+              <div class="dropdown-content">
+               <a href="adminpanel.Tregistration">Tutor</a>
+               <a href="adminpanel.Sregistration">Student</a>
+             </div>
+          </div>
+          <!-- <li class="nav-item ">
             <a class="nav-link" href="adminpanel.registration">
               <i class="material-icons"></i>
               <p>Registration</p>
+              <ul class="nav">
+              <li class="nav-item ">
+              <a class="nav-link" href="">
+              <p>Tutor</p>
+              </a>
+              </li>
+              <li class="nav-item ">
+              <a class="nav-link" href="">
+              <p>Student</p>
+              </a>
+              </li>
+              </ul>
             </a>
-          </li>
-          <li class="nav-item ">
+          </li> -->
+          <li class="nav-item  ">
             <a class="nav-link" href="adminpanel.user">
-              <i class="material-icons"></i>
+              <i class="material-icons">person</i>
               <p>Users</p>
             </a>
           </li>
         
           <li class="nav-item ">
             <a class="nav-link" href="./typography.blade.php">
-              <i class="material-icons"></i>
+              <i class="material-icons">grid_on</i>
               <p>Attendence</p>
             </a>
           </li>
@@ -171,10 +219,11 @@
                   <a class="dropdown-item" href="#">Log out</a>
                 </div>
               </li>
-            </ul> 
-           </div> 
-        </div>-->
-       </nav>
+            </ul> -->
+           <!-- </div>  -->
+           </nav>
+        <!-- </div> -->
+       
 
       <!-- End Navbar -->
       <div class="content">
@@ -184,15 +233,16 @@
               <div class="card card-stats">
                 <div class="card-header card-header-warning card-header-icon">
                   <div class="card-icon">
-                  <i class="fa fa-user" style="font-size:36px"></i>
+                  <i class="fa fa-user" style="font-size:50px"></i>
                   </div>
-                  <p class="card-category">Number of Admin</p>
-                  <h3 class="card-title">Admin
-                    <small>01</small>
+                  <p class="card-category"><u>Number of Admin</u></p>
+                  <h3 class="card-title"><b>Admin 01</b>
+                    <small></small>
                   </h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
+                  <p3><a href="">See Admin list</a></p3>
                   </div>
                 </div>
               </div>
@@ -203,11 +253,12 @@
                   <div class="card-icon">
                   <i class="material-icons" style="font-size:36px">supervisor_account</i>
                   </div>
-                  <p class="card-category">Number of Tutors</p>
-                  <h3 class="card-title">Tutors 01</h3>
+                  <p class="card-category"><u>Number of Tutors</u></p>
+                  <h3 class="card-title"><b>Tutors 01</b></h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
+                  <p3><a href="">See Tutors list</a></p3>
                   </div>
                 </div>
               </div>
@@ -218,11 +269,12 @@
                   <div class="card-icon">
                   <i class="material-icons" style="font-size:36px">wc</i>
                   </div>
-                  <p class="card-category">Number of Students</p>
-                  <h3 class="card-title">Students 05</h3>
+                  <p class="card-category"><u>Number of Students</u></p>
+                  <h3 class="card-title"><b>Students 05</b></h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
+                  <p3><a href="">See Students list</a></p3>
                   </div>
                 </div>
               </div>
@@ -233,11 +285,12 @@
                   <div class="card-icon">
                   <i class="fa fa-th-list" style="font-size:36px;"></i>
                   </div>
-                  <p class="card-category">Number of courses</p>
-                  <h3 class="card-title">07</h3>
+                  <p class="card-category"><u>Number of courses</u></p>
+                  <h3 class="card-title"><b>07</b></h3>
                 </div>
                 <div class="card-footer">
                   <div class="stats">
+                  <p3><a href="">See Courses list</a></p3>
                   </div>
                 </div>
               </div>
@@ -247,15 +300,15 @@
           <!--------------------------------------- second raw ------------------------------------------------> 
           <div class="row"> 
             <div class="col-md-4">
-                <img src="{{url('public/adminpanel/img/inserción-laboral-universitarios.jpg')}}" alt="" height="420" width="420"> 
+                <img src="{{url('public/adminpanel/img/inserción-laboral-universitarios.jpg')}}" alt="" height="470" width="470"> 
                 </div>
     
             <div class="col-md-4" >
-                <img src="{{url('public/adminpanel/img/logo4.png')}}" alt="" height="420" width="420">
+                <img src="{{url('public/adminpanel/img/logo4.png')}}" alt="" height="470" width="470">
                 </div>
               
             <div class="col-md-4">
-                <img src="{{url('public/adminpanel/img/students-graduating.jpg')}}" alt="" height="420" width="420">
+                <img src="{{url('public/adminpanel/img/students-graduating.jpg')}}" alt="" height="470" width="470">
             </div>  
            </div>
 
